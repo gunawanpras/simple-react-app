@@ -14,8 +14,8 @@ jobs:
           node-version: 12.x
       - run: |
           npm ci
-          npm run format:check
-          npm run format
+          npm format:check
+          npm format
           npm test -- --coverage
         env:
           CI: true
