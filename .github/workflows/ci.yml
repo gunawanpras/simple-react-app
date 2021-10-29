@@ -37,6 +37,8 @@ jobs:
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Build Folder
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v1
