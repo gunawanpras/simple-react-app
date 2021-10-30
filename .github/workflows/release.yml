@@ -1,13 +1,13 @@
 name: Slack Notification
-on: 
+on:
   release:
     types: [published]
-  
+
 jobs:
   slack-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Slack Message        
+      - name: Slack Message
         uses: docker://technosophos/slack-notify
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
