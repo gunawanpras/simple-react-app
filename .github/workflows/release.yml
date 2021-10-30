@@ -6,8 +6,6 @@ on:
 jobs:
   slack-message:
     runs-on: ubuntu-latest
-    container:
-      image: node:17-alpine3.13
     steps:
       - name: Slack Message
         uses: docker://technosophos/slack-notify
