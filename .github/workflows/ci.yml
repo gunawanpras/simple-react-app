@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: build
-          path: build      
+          path: build
       - name: Deploy to Staging
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain manly-app.surge.sh
