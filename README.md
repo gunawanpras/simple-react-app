@@ -1,4 +1,4 @@
-![](https://github.com/gunawanpras/simple-react-app/workflows/CI/badge.svg?branch=develop&event=push)
+![](https://github.com/gunawanpras/simple-react-app/workflows/CI/badge.svg?branch=devel&event=push)
 
 # Getting Started with Create React App
 
