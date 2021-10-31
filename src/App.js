@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Go Language with confident
+          Learn React
         </a>
       </header>
     </div>
