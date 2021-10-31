@@ -1,0 +1,12 @@
+name: Slack Notification
+on:
+  release:
+    types: [published]
+
+jobs:
+  slack-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send slack message when new version released
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"New release ${{ github.event.release.tag_name }} is out, <${{ github.event.release.html_url }}|Check it out now.>"}' ${{ secrets.SLACK_WEBHOOK }}
