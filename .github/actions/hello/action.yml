@@ -10,5 +10,5 @@ outputs:
   time:
     description: "The greeting time"
 runs:
-  using: "node15"
+  using: "node12"
   main: "dist/index.js"
