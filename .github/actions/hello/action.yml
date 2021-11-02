@@ -1,5 +1,6 @@
 name: Hwllo world
-author: description
+author: Gunawan
+description: Some description
 inputs:
   who-to-greet:
     description: "Who to greet"
