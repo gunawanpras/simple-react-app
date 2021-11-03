@@ -1,0 +1,14 @@
+name: "Hello World"
+author: gunawanpras
+description: "Some description"
+inputs:
+  token:
+    description: "Who to greet"
+    required: true
+    default: Gunawan
+outputs:
+  issue:
+    description: "The greeting time"
+runs:
+  using: "docker"
+  image: "Dockerfile"
