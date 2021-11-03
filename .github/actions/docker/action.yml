@@ -2,13 +2,15 @@ name: "Hello World"
 author: gunawanpras
 description: "Some description"
 inputs:
-  token:
+  who-to-greet:
     description: "Who to greet"
     required: true
     default: Gunawan
 outputs:
-  issue:
+  time:
     description: "The greeting time"
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.who-to-greet }}

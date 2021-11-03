@@ -15,4 +15,5 @@ echo "logs 2"
 echo "logs 3"
 echo "::endgroup"
 
-echo "::set-env name=HELLO::hello"
+echo "HELLO=hello" >> $GITHUB_ENV
+# echo "::set-env name=HELLO::hello"
