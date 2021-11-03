@@ -9,7 +9,7 @@ jobs:
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
           message: Test sending slack message..
-      - uses: ./.github/actions/issue
+      - uses: gunawanpras/open-issue@v1
         id: issue
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
