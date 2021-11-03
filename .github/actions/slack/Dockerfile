@@ -8,4 +8,4 @@ WORKDIR $APP_DIR
 COPY . .
 RUN apt-get update && apt-get install -y zip && composer install
 
-ENTRYPOINT ["php", "$APP_DIR/script.php"]
+ENTRYPOINT ["php", "/var/www/app/script.php"]
