@@ -1,0 +1,30 @@
+on: push
+jobs:
+  testing-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Send a Slack MEssage
+        uses: ./.github/actions/slack
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+          message: Test sending slack message..
+      - uses: gunawanpras/open-issue@v1
+        id: issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Title
+          body: Body
+          assignees: |
+            gunawanpras
+            gugun
+      - run: |
+          echo ${{ steps.issue.outputs.issue }}
+      - uses: ./.github/actions/docker
+        id: hello
+        with:
+          who-to-greet: "World"
+      - run: |
+          echo "Time ${{ steps.hello.outputs.time }}"
+          echo $HELLO
+          echo ${{ env.HELLO }}
