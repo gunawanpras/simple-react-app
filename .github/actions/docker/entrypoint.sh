@@ -18,8 +18,8 @@ echo "::endgroup"
 echo "HELLO=hello" >> $GITHUB_ENV
 # echo "::set-env name=HELLO::hello"
 
-if [ true ]
-then
-    echo 'throw exception'
-    exit 1
-fi
+# if [ true ]
+# then
+#     echo 'throw exception'
+#     exit 1
+# fi
